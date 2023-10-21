@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.7.1.slim.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <!-- Contenido HTML -->
+    <div>
+        <!-- Logo -->
+        <div class="Primera_barra">
+            <img class="Imagen" src="imagenes/logo.png" alt="">
+        </div>
+        <!-- Titulo de Datos -->
+        <div class="ancho">
+            <div class="Barra_Abajo">
+                <h1>Datos generales del alumno</h1>
+            </div>
+            <hr class="ancho Barrita">
+        </div>
+        <!-- campos obligatorios -->
+        <div class="ancho">
+            <!-- Campos obligatorios -->
+            <div class="Espaciado">
+                <h4 class="color">
+                    *Campos obligatorios
+                </h4>
+            </div>
+            <!-- Formulario -->
+            <form action="Datos.html" method="get" name="DatosObligatorios">
+                <!-- CURP -->
+                <div class="Espaciado">
+                    <div class="Un_lado">
+                        <p>
+                            CURP:
+                        </p>
+                        <input class="lado" type="text" placeholder="CURP">
+                    </div>
+                    <!-- Boton Consulta -->
+                    <div class="Boton_Consulta Un_lado">
+                        <a href="">
+                            Consultar CURP
+                            <div class="Un_lado">
+                                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAACXBIWXMAAAsTAAALEwEAmpwYAAAA90lEQVR4nO2TS4rCUBBFM9d2pG7Hzw5s3EoTHDRGnbgbpV2Hn52kjU71SOENBEF5FZWWxgsPEnJfnaJSN4r+pYAmMAHWwF5nBYyBxr3F+0DGdW2Bz3uKH1VoBrSAik4bmOvbAeiVGUve+dcNXyzPL1D3ACZ55wHeH3lHHsBGl1oB3o68Kw9gp0vVAO+HvJkHkDkAtTIA23lTO8DbLTMiC5FpHuBdyJt4AA2FyBTf8A3kSd2ptoQqRGgVO/ZPdLqFzk3fruIFSE8huqbUihfekzKQuoUIWGp993oe5WO5gPohAU3EF5DpG/JS4xo+HBCdIclTNupPdQLXKBYWEeCEJgAAAABJRU5ErkJggg==">
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <!-- Nombre y apellidos -->
+                <div class="Espaciado">
+                    <div class="Un_lado">
+                        <p>
+                                Nombre*:
+                        </p>
+                        <input id="Nombre" class="lado" type="text" placeholder="Nombres">
+                    </div>
+                    <div class="Un_lado">
+                        <p>
+                            Primer Apellido*:
+                        </p>
+                        <input id="Primer_Apellido" class="lado" type="text" placeholder="Primer Apellido">
+                    </div>
+                    <div class="Un_lado">
+                        <p>
+                            Segundo Apellido:
+                        </p>
+                        <input class="lado" type="text" placeholder="Segundo Apellido">
+                    </div>
+                </div>
+                <!-- Correo, Sexo y Fecha -->
+                <div class="Espaciado">
+                    <div class="Un_lado">
+                        <p>
+                                correo electronico*:
+                        </p>
+                        <input id="Email" class="lado" type="email" placeholder="Correo">
+                    </div>
+                    <div class="Un_lado">
+                        <p>
+                            Sexo:
+                        </p>
+                        <select class="lado" name="Sexo" id="">
+                            <option value="" hidden>Selecciona una opción</option>
+                            <option value="">Hombre</option>
+                            <option value="">Mujer</option>
+                            <option value="">Prefiero No Especificar</option>
+                        </select>
+                    </div>
+                    <div class="Un_lado">
+                        <p>
+                            Fecha de nacimiento:
+                        </p>
+                        <input class="lado" type="date" name="Fecha_nacimiento">
+                    </div>
+                </div>
+                <!-- Telefono fijo y celular -->
+                <div class="Espaciado">
+                    <div class="Un_lado">
+                        <p>
+                                Telefono fijo:
+                        </p>
+                        <input class="lado" type="number" placeholder="Telefono">
+                    </div>
+                    <div class="Un_lado">
+                        <p>
+                            Celular:
+                        </p>
+                        <input class="lado" type="number" placeholder="Telefono">
+                    </div>
+                </div>
+                <!-- Asuntos -->
+                <div class="Espaciado">
+                    <p>
+                        Asuntos*:
+                    </p>
+                    <textarea class="lado1" id="Asunto" name="" cols="30" rows="10"></textarea>
+                </div>
+                <!-- Boton Enviar -->
+                <div class="Espaciado1">
+                    <button id="Boton_Enviar" class="Boton_Verde" type="button">Enviar</button>
+                </div>
+            </form>
+        </div>
+        <!-- Campo de datos alumno -->
+        <div class="ultima_barra">
+            <p>
+                Christian Dayana de la Cruz López
+                <br>
+                7SB
+                <br>
+                Programación Web
+            </p>
+        </div>
+    </div>
+    <!-- Contenido del codigo de JS -->
+    <script type="text/javascript">
+        //Validar funcion
+        $("#Boton_Enviar").click(function ()
+        {
+            //Validar Nombre
+            if ($(Nombre).val().trim() == '')
+            {
+                alert("Escribe tu Nombre ");
+                $(Nombre).focus();
+                return 0;
+            }
+            //Validar Primer apellido
+            if ($(Primer_Apellido).val().trim() == '')
+            {
+                alert("Escribe tu Apellido ");
+                $(Primer_Apellido).focus();
+                return 0;
+            }
+            //Validar Correo Electronico
+            if ($(Email).val().trim() == '')
+            {
+                alert("Escribe tu Correo Electronico ");
+                $(Email).focus();
+                return 0;
+            }
+            //Validar Asunto
+            if ($(Asunto).val().trim() == '')
+            {
+                alert("Escribe el Asunto ");
+                $(Asunto).focus();
+                return 0;
+            }
+            //Documento a redirigir
+            document.DatosObligatorios.submit();
+        });
+    </script>
+</body>
+</html>

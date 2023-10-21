@@ -1,0 +1,101 @@
+/* PRIMORDIALES */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: helvetica;
+    font-size: 16px;
+    line-height: 24px;
+    color: #333;
+}
+
+.ancho {
+    width: 1350px;
+    margin: auto;
+    /* border: 1px #ff0000 solid; */
+}
+
+/* Para uso de varias veces */
+
+.Barra {
+    border: 1px red solid;
+}
+
+.Un_lado {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+.Primera_barra {
+    background-color: gainsboro;
+    text-align: center;
+}
+
+.Imagen {
+    width: 100px;
+    height: 100px;
+}
+
+.color {
+    color: #740006;
+}
+
+.ultima_barra {
+    background-color: #740006;
+    text-align: center;
+    padding: 20px;
+    color: white;
+}
+
+.Boton_Consulta {
+    text-align: center;
+    padding-left: 15px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    background-color: #740006;
+}
+
+.Boton_Consulta a {
+    text-decoration: none;
+    color: white;
+}
+
+.lado {
+    width: 300px;
+}
+
+.lado1 {
+    width: 1340px;
+    height: 300px;
+}
+
+.Boton_Verde {
+    background-color: #0B241e;
+    color: white;
+    padding: 10px 30px;
+}
+
+.Barra_Abajo {
+    border-bottom: 1px #0B241e solid;
+    padding: 20px 0px;
+}
+
+.Barrita {
+    background-color: #740006;
+    height: 10px;
+    width: 60px;
+    margin-right: 1335px;
+    margin-bottom: 40px;
+}
+
+.Espaciado {
+    margin-bottom: 15px;
+}
+
+.Espaciado1 {
+    margin-bottom: 100px;
+}
+
